@@ -478,6 +478,11 @@ nav ul li a:hover {
   .social-links {
     gap: 15px;
   }
+
+  nav{
+    width: calc(100vw - 90px);
+    margin: 10px auto;
+  }
 }
 
 @media screen and (max-width:560px) {
