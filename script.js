@@ -18,32 +18,56 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Mobile Menu Toggle (Clean logic)
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('active');
-            mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-            
-            // Toggle icon
-            const icon = mobileMenuBtn.querySelector('i');
+    const overlay = document.querySelector('.sidemenu-overlay');
+
+    const toggleMenu = (show) => {
+        if (!mobileMenuBtn || !navLinks) return;
+        
+        const isOpen = show !== undefined ? show : !navLinks.classList.contains('active');
+        
+        navLinks.classList.toggle('active', isOpen);
+        if (overlay) overlay.classList.toggle('active', isOpen);
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        
+        // Toggle icon
+        const icon = mobileMenuBtn.querySelector('i, svg');
+        if (icon) {
             if (isOpen) {
                 icon.setAttribute('data-lucide', 'x');
             } else {
                 icon.setAttribute('data-lucide', 'menu');
             }
-            lucide.createIcons();
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // Toggle body scroll
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
+    }
+
+    // Close menu when clicking overlay
+    if (overlay) {
+        overlay.addEventListener('click', () => toggleMenu(false));
     }
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.setAttribute('data-lucide', 'menu');
-            lucide.createIcons();
-        });
+        link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Close menu when clicking outside (alternative to overlay click)
+    document.addEventListener('click', (e) => {
+        if (navLinks && navLinks.classList.contains('active') && 
+            !navLinks.contains(e.target) && 
+            mobileMenuBtn && !mobileMenuBtn.contains(e.target)) {
+            toggleMenu(false);
+        }
     });
 
     // 4. Smooth Scrolling for all links
