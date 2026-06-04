@@ -159,13 +159,6 @@ nav {
         inset 0 0 2px 1px rgba(255, 255, 255, 0.1);
 }
 
-/* 
-nav.scrolled {
-    background: var(--bg-glass);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--border-glass);
-} */
-
 .nav-container {
     max-width: 1200px;
     width: 100%;
@@ -969,7 +962,6 @@ nav.scrolled {
         text-align: center;
         padding-top: 180px;
         min-height: auto;
-        /* gap: 20px; Reduced gap for better fit */
     }
 
     .hero-content {
@@ -1017,12 +1009,10 @@ nav.scrolled {
 @media (max-width: 768px) {
     .hero {
         padding: 120px 20px 60px;
-        /* Fixed padding for very small screens */
     }
 
     .hero h1 {
         font-size: clamp(2rem, 8vw, 3rem);
-        /* Adjust font size for smaller screens */
     }
 
     .hero-sub {
@@ -1031,7 +1021,6 @@ nav.scrolled {
 
     .terminal-body pre {
         white-space: pre-wrap;
-        /* Allow code to wrap */
         word-break: break-word;
     }
 
@@ -1047,7 +1036,6 @@ nav.scrolled {
 
     .contact-socials {
         align-items: center;
-        /*Center social links when stacked */
     }
 
     .contact-info p {

@@ -35,7 +35,7 @@ export const projects = [
 
   {
     title: "KnightMC Bot",
-    description: "Comprehensive Discord automation for chat detection, XP systems.",
+    description: "Comprehensive Discord automation for XP system, in-game chat monitoring through discord.",
     tags: ["Discord.js", "Automation"],
     demo: "",
     github: "https://github.com/virendraxd/KnightMC"

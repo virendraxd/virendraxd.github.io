@@ -4,6 +4,9 @@ import { projects } from '../data/projects'
 import heroImage from '../assets/virendra_crossing_arms_main_nobg_full.png'
 import ProjectCard from '../components/ProjectCard.jsx'
 import ServiceCard from '../components/ServiceCard.jsx'
+import '../styles/Home.css'
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -74,7 +77,7 @@ function Home() {
             <nav id="main-nav" aria-label="Main Navigation">
                 <div className="nav-container">
                     <a href="#home" className="logo" onClick={closeMenu}>Virendra<span>.</span></a>
-                    <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+                    <ul className={`nav-links ${isMenuOpen ? 'active ulGap' : ''}`}>
                         <li><a href="#home" onClick={closeMenu}>Home</a></li>
                         <li><a href="#about" onClick={closeMenu}>About</a></li>
                         <li><a href="#services" onClick={closeMenu}>Services</a></li>
@@ -82,14 +85,18 @@ function Home() {
                         <li><a href="#skills" onClick={closeMenu}>Stack</a></li>
                         <li><a href="#contact" className="nav-cta" onClick={closeMenu}>Let's Talk</a></li>
                     </ul>
+
                     <button
                         className="menu-toggle"
                         id="mobile-menu"
                         aria-label="Toggle Menu"
                         aria-expanded={isMenuOpen}
-                        onClick={toggleMenu}
+                        onClick={() => {
+                            toggleMenu()
+                            setIsMenuOpen(!isMenuOpen)
+                        }}
                     >
-                        <i data-lucide={isMenuOpen ? "x" : "menu"}></i>
+                        {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
                     </button>
                 </div>
             </nav>
