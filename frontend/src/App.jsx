@@ -161,7 +161,7 @@ function App() {
             <div className="section-header" style={{textAlign: "left", marginBottom: "30px"}}>
               <h2 className="title">About <span>Me</span></h2>
             </div>
-            <p>Hi, I'm Virendra Singh, a web developer focused on building modern websites and web applications.</p>
+            <p>Hi, I'm Virendra Singh Shakyawar, a web developer focused on building modern websites and web applications.</p>
             <p>I create responsive, user-friendly and visually polished digital experiences for students, startups
               and small businesses. With a strong interest in UI/UX and product development, I enjoy turning ideas
               into practical solutions that are both functional and engaging.</p>
