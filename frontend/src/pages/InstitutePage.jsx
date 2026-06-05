@@ -10,6 +10,7 @@ import Facilities from '../components/institute/Facilities'
 import Contact from '../components/institute/Contact'
 import Footer from '../components/institute/Footer'
 import Nav from '../components/institute/Nav'
+import '../styles/Institute.css'
 
 function InstitutePage() {
     return (
