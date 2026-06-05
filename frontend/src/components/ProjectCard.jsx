@@ -20,17 +20,10 @@ function ProjectCard({ title, description, tags, demo, github, }) {
 
                 <div className="project-links">
                     {demo && (
-                        (demo == "/institute-page")
-                            ? (
-                                <Link to={demo}>
-                                    <BiLinkExternal /> Live Demo
-                                </Link>
-                            )
-                            : (
-                                <a href={demo} target="_blank" rel="noopener noreferrer">
-                                    <BiLinkExternal /> Live Demo
-                                </a>
-                            )
+                        <a href={demo} target="_blank" rel="noopener noreferrer">
+                            <BiLinkExternal /> Live Demo
+                        </a>
+
                     )}
 
                     {github && (

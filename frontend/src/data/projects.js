@@ -8,14 +8,14 @@ export const projects = [
     github: "https://github.com/virendraxd/knighttechlabs",
   },
 
-  {
-    title: "Institute Website",
-    description:
-      "Modern website concept designed for coaching centers and educational institutes.",
-    tags: ["Website", "Educational"],
-    demo: "/institute-page",
-    github: "",
-  },
+  // {
+  //   title: "Institute Website",
+  //   description:
+  //     "Modern website concept designed for coaching centers and educational institutes.",
+  //   tags: ["Website", "Educational"],
+  //   demo: "",
+  //   github: "",
+  // },
 
   {
     title: "Quiz App",
