@@ -9,6 +9,15 @@ export const projects = [
   },
 
   {
+    title: "Institute Website",
+    description:
+      "Modern website concept designed for coaching centers and educational institutes.",
+    tags: ["Website", "Educational"],
+    demo: "/institute-page",
+    github: "",
+  },
+
+  {
     title: "Quiz App",
     description:
       "A responsive quiz application featuring score, review system and dynamic question fetching.",

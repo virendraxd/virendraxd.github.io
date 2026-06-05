@@ -64,7 +64,7 @@ function Home() {
     const closeMenu = () => setIsMenuOpen(false)
 
     return (
-        <>
+        <div className="home-page">
             {/* <!-- Background Glows --> */}
             <div className="glow-bg" aria-hidden="true"></div>
 
@@ -344,8 +344,7 @@ function Home() {
                     <p>&copy; 2026 Virendra Singh | All rights reserved.</p>
                 </div>
             </footer >
-
-        </>
+        </div>
     )
 }
 

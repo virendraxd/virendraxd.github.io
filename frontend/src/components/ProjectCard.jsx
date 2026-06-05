@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiLinkExternal } from "react-icons/bi";
 import { IoCodeSlashSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function ProjectCard({ title, description, tags, demo, github, }) {
 
@@ -19,9 +20,17 @@ function ProjectCard({ title, description, tags, demo, github, }) {
 
                 <div className="project-links">
                     {demo && (
-                        <a href={demo} target="_blank" rel="noopener noreferrer">
-                            <BiLinkExternal /> Live Demo
-                        </a>
+                        (demo == "/institute-page")
+                            ? (
+                                <Link to={demo}>
+                                    <BiLinkExternal /> Live Demo
+                                </Link>
+                            )
+                            : (
+                                <a href={demo} target="_blank" rel="noopener noreferrer">
+                                    <BiLinkExternal /> Live Demo
+                                </a>
+                            )
                     )}
 
                     {github && (
