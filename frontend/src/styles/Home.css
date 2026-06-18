@@ -241,6 +241,25 @@
     margin-bottom: 24px;
 }
 
+.home-page .hero-text-container h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.home-page .hero-text-container h1 {
+    color: #ff8c00;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-page .hero-sub {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+}
+
 .home-page .pulse {
     width: 8px;
     height: 8px;

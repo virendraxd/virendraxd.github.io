@@ -108,9 +108,11 @@ function Home() {
                         <div className="hero-badge reveal">
                             <span className="pulse" aria-hidden="true"></span> Available for Freelance / Internship
                         </div>
-                        <h1 className="reveal">I build modern web apps and <span>automation tools</span>.</h1>
-                        <p className="hero-sub reveal">Engineering scalable solutions for the digital age. I specialize in crafting
-                            modern web applications, intuitive user experiences and digital products.</p>
+                        <div className="hero-text-container reveal">
+                            <h2>Hi, I'm</h2>
+                            <h1>Virendra Singh Shakyawar</h1>
+                        </div>
+                        <p className="hero-sub reveal">Full-stack engineer building modern weebsite, scalable web applications and automation tools that simplify work and enhance user experiences.</p>
 
                         <div className="hero-actions reveal">
                             <a href="#projects" className="btn btn-primary">View Projects <i data-lucide="arrow-right"
@@ -124,7 +126,7 @@ function Home() {
                                 <span className="label">Projects Completed</span>
                             </div>
                             <div className="stat-item">
-                                <span className="count">510+</span>
+                                <span className="count">550+</span>
                                 <span className="label">Downloads on Modrinth</span>
                             </div>
                         </div>
@@ -147,7 +149,7 @@ function Home() {
                                         <br />
                                         &nbsp;&nbsp;role: <span className="string">'Full-Stack Engineer'</span>,
                                         <br />
-                                        &nbsp;&nbsp;focus: [<span className="string">'Webapps'</span>, <span className="string">'Automation'</span>],
+                                        &nbsp;&nbsp;focus: [<span className="string">'Websites'</span>, <span className="string">'Webapps'</span>, <span className="string">'Automation'</span>],
                                         <br />
                                         &nbsp;&nbsp;status: <span className="string">'Ready to deliver results'</span>
                                         <br />
@@ -253,10 +255,14 @@ function Home() {
 
                             <div className="skill-icons">
                                 <i className="devicon-html5-plain colored" title="HTML5"></i>
+
                                 <i className="devicon-css3-plain colored" title="CSS3"></i>
+                                
                                 <i className="devicon-javascript-plain colored" title="JavaScript"></i>
 
                                 <i className="devicon-react-original colored" title="React"></i>
+                                
+                                <i className="devicon-tailwindcss-plain colored" title="React"></i>
 
                                 <i className="devicon-vscode-plain colored" title="VS Code"></i>
                             </div>
@@ -294,6 +300,7 @@ function Home() {
                         <div className="github-stats">
                             <img src="https://streak-stats.demolab.com?user=virendraxd&theme=tokyonight&hide_border=true&background=0D1117"
                                 alt="GitHub Streak" loading="lazy" />
+                                
                             <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=virendraxd&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117"
                                 alt="GitHub Stats" loading="lazy" />
 
@@ -341,7 +348,7 @@ function Home() {
 
             <footer className="footer">
                 <div className="footer-content">
-                    <p>&copy; 2026 Virendra Singh | All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Virendra Singh Shakyawar | All rights reserved.</p>
                 </div>
             </footer >
         </div>
